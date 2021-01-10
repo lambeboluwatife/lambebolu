@@ -377,6 +377,10 @@ footer i {
     margin-left: 40px;
   }
 
+  .common-btn {
+    color: #fff;
+  }
+
   #menuBtn {
     top: 10px;
     right: 20px;
