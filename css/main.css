@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 #container {
@@ -35,7 +47,8 @@ h1 {
   margin: 15px 0;
 }
 
-.common-btn, .close-btn {
+.common-btn,
+.close-btn {
   padding: 18px 40px;
   background: transparent;
   outline: none;
@@ -52,13 +65,28 @@ p {
   font-family: mead bold;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
 .sub {
   color: #000;
 }
 
 .subs {
   color: #000;
-  font-family: Tempus Sans ITC;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
 }
 
 .header-text button {
@@ -67,7 +95,7 @@ p {
 }
 
 a {
-  font-family: Tempus Sans ITC
+  font-family: Tempus Sans ITC;
 }
 
 .github {
@@ -142,7 +170,9 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 35px;
   height: 5px;
   background-color: darkred;
@@ -181,6 +211,67 @@ nav ul li a:hover {
 hr {
   background-color: darkred;
   width: 80%;
+}
+
+.skill-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-text {
+  display: none;
+}
+
+.img-area {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-area img {
+  width: 100%;
+  height: auto;
+}
+
+.img-text,
+.img-area:after {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.img-area:after {
+  content: "";
+  height: 100%;
+  top: 0;
+  transition: 0.5s;
+}
+
+.img-area:hover:after {
+  background: linear-gradient(
+    to bottom,
+    rgba(199, 0, 57, 0.01) 0,
+    rgba(199, 0, 57, 0.25) 25%,
+    rgba(199, 0, 57, 0.75) 75%,
+    rgba(199, 0, 57, 0.95) 100%
+  );
+}
+
+.img-text {
+  padding: 20px;
+  bottom: 0;
+  z-index: 1;
+  transform: translateY(145px);
+  transition: all 0.5s cubic-bezier(0.13, 0.62, 0.81, 0.91) 0s;
+}
+
+.img-area:hover .img-text {
+  transform: translateY(0);
 }
 
 /* social-icons */
@@ -343,6 +434,23 @@ footer i {
     margin-left: 50px;
   }
 
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .project-text {
+    display: block;
+  }
+
+  .project-text button {
+    margin-top: 3px;
+  }
+
+  .img-text {
+    display: none;
+  }
+
   .logo {
     margin-top: 10px;
     width: 50px;
@@ -387,7 +495,15 @@ footer i {
   }
 
   #sideNav {
-    width: 100px;
+    width: 150px;
+    height: 70vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: darkred;
+    z-index: 2;
+    transition: 0.5s;
+    font-family: cursive;
   }
 
   nav ul li a {
@@ -397,6 +513,18 @@ footer i {
   nav ul li a:hover {
     font-size: 15px;
     font-weight: bold;
+  }
+
+  .subs {
+    text-align: center;
+  }
+
+  .mongo {
+    width: 80%;
+  }
+
+  .img-text {
+    font-size: smaller;
   }
 
   .social-icons {
