@@ -397,8 +397,28 @@ footer i {
     margin-top: 50px;
   }
 
+  .common-btn {
+    color: #fff;
+  }
+
   h1 {
     font-size: 45px;
+  }
+
+  .img-area:hover:after {
+    background: none;
+  }
+
+  .project-text {
+    display: block;
+  }
+
+  .project-text button {
+    margin-top: 3px;
+  }
+
+  .img-text {
+    display: none;
   }
 
   .common-btn {
